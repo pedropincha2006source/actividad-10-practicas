@@ -1,0 +1,170 @@
+{
+  "_signature": "PDLZ_v1::1762961393781",
+  "data": {
+    "variables": [
+      {
+        "id": "2088651634",
+        "name": "Area"
+      }
+    ],
+    "csvsData": [
+      {
+        "id": 3590672338,
+        "filename": "area_protegida.csv",
+        "columnsNames": [
+          "lat",
+          "lng",
+          "gid",
+          "entidad",
+          "objeto",
+          "fna",
+          "gna",
+          "nam",
+          "tap",
+          "jap",
+          "caa",
+          "fdc",
+          "sag",
+          "area"
+        ]
+      }
+    ],
+    "blocks": {
+      "blocks": {
+        "languageVersion": 0,
+        "blocks": [
+          {
+            "type": "variables_set",
+            "id": "RU7.SSZohCu#Q2[kOnhp",
+            "x": -40,
+            "y": -54,
+            "fields": {
+              "variableSetterKey": "2088651634"
+            },
+            "inputs": {
+              "VALUE": {
+                "block": {
+                  "type": "read_csv",
+                  "id": "rn`qtIX/E#7$ME,;{5}]",
+                  "fields": {
+                    "csvOptions": "3590672338"
+                  }
+                }
+              }
+            },
+            "next": {
+              "block": {
+                "type": "map_viewer",
+                "id": ")cfKKmF:]S5vvm0H^y;K",
+                "inputs": {
+                  "DATAFRAME": {
+                    "block": {
+                      "type": "read_csv",
+                      "id": "PA*YSNq90eRa{KF]$Q/2",
+                      "fields": {
+                        "csvOptions": "3590672338"
+                      }
+                    }
+                  },
+                  "LAT": {
+                    "block": {
+                      "type": "get_column_name",
+                      "id": "T-`ezPDwdlzG]:or#7V-",
+                      "inputs": {
+                        "COLUMN_SERIES": {
+                          "block": {
+                            "type": "property",
+                            "id": "ZGtKyuL51tzq;Zqb,RwU",
+                            "extraState": {
+                              "selectedOption": "lat"
+                            },
+                            "fields": {
+                              "dropdown": "lat"
+                            },
+                            "inputs": {
+                              "blockInput": {
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "nb[w.$mL[ytCcq2Yp?x}",
+                                  "fields": {
+                                    "variableGetterKey": "2088651634"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "LONG": {
+                    "block": {
+                      "type": "get_column_name",
+                      "id": "KC;CGc!tw#|_vj[sc5zO",
+                      "inputs": {
+                        "COLUMN_SERIES": {
+                          "block": {
+                            "type": "property",
+                            "id": "[9*h@%:~`{jBumS[QjcW",
+                            "extraState": {
+                              "selectedOption": "lng"
+                            },
+                            "fields": {
+                              "dropdown": "lng"
+                            },
+                            "inputs": {
+                              "blockInput": {
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "[ss4Yj0czYJV$-6~m|Q)",
+                                  "fields": {
+                                    "variableGetterKey": "2088651634"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "CATEGORY": {
+                    "block": {
+                      "type": "get_column_name",
+                      "id": "=#FssQ*!::FYTb)9cVk8",
+                      "inputs": {
+                        "COLUMN_SERIES": {
+                          "block": {
+                            "type": "property",
+                            "id": "i9=bICQnnzY$l}FYd.*|",
+                            "extraState": {
+                              "selectedOption": "nam"
+                            },
+                            "fields": {
+                              "dropdown": "nam"
+                            },
+                            "inputs": {
+                              "blockInput": {
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "tMb,(moo5y@7^AR[I[Qv",
+                                  "fields": {
+                                    "variableGetterKey": "2088651634"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
